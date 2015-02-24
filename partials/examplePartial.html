@@ -28,6 +28,14 @@
 		<div class="col-md-4 col-xs-12">
 			<h2>Remove App</h2>
 			<hr>
+			<div class="form-group">
+				<select class="form-control" ng-options="app.id as app.name for app in apps" ng-model="create">
+					<option value="">Choose app name...</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-block btn-danger">Remove App</button>
+			</div>
 		</div>
 	</div>
 </div>
