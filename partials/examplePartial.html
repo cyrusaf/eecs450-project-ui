@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-xs-12">
+			<h2>Approved Apps</h2>
+			<hr>
+			<div class="approved-app approved-app-header">
+				<div class="name">App Name</div>
+				<div class="id">App ID</div>
+			</div>
+			<div class="approved-app" ng-repeat="app in apps">
+				<div class="name">{{app.name}}</div>
+				<div class="id">{{app.id}}</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-xs-12">
+			<h2>Add New App</h2>
+			<hr>
+		</div>
+		<div class="col-md-4 col-xs-12">
+			<h2>Remove App</h2>
+			<hr>
+		</div>
+	</div>
+</div>

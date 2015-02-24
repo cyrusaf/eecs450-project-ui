@@ -1,0 +1,13 @@
+body {
+	margin: 0;
+}
+
+.approved-app-header div {
+	font-weight: 800;
+}
+
+.approved-app div{
+	float: left;
+	width: 50%;
+	font-size: 14pt;
+}
