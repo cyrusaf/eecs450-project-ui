@@ -2,7 +2,7 @@ var controllers = angular.module('controllers', []);
 
 controllers.controller('itemController', ['$scope', '$http', function ($scope, $http) {
 
-	$scope.ip = "http://10.101.54.81:3001"
+	$scope.ip = "http://localhost:3001"
 	$scope.apps = [];
 	getApps($scope, $http);
 

@@ -6,8 +6,16 @@ body {
 	font-weight: 800;
 }
 
+.approved-app {
+	overflow: auto;
+}
+
 .approved-app div{
 	float: left;
-	width: 50%;
+	width: 33%;
 	font-size: 14pt;
+}
+
+.approved-app div img {
+	width: 30%;
 }

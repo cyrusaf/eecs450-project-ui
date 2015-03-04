@@ -1,35 +1,42 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-xs-12">
+		<div class="col-md-6 col-xs-12">
 			<h2>Approved Apps</h2>
 			<hr>
 			<div class="approved-app approved-app-header">
+				<div class="name">App Icon</div>
 				<div class="name">App Name</div>
 				<div class="id">App ID</div>
 			</div>
 			<div class="approved-app" ng-repeat="app in apps">
+				<div class="img"><img ng-src="{{app.img}}"></div>
 				<div class="name">{{app.name}}</div>
 				<div class="id">{{app.id}}</div>
 			</div>
 		</div>
-		<div class="col-md-4 col-xs-12">
+		<div class="col-md-3 col-xs-12">
 			<h2>Add New App</h2>
 			<hr>
-			<div class="form-group">
-				<input type="text" class="form-control" id="inputName" placeholder="App name..." ng-model="create.name">
-			</div>
-			<div class="form-group">
-				<input type="text" class="form-control" id="inputID" placeholder="App ID..." ng-model="create.id">
-			</div>
-			<div class="form-group">
-				<button class="btn btn-block btn-primary" ng-click="addApp()">Add App</button>
-			</div>
+			<form method="POST" action="http://localhost:3001/items" enctype="multipart/form-data">
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputName" placeholder="App name..." ng-model="create.name" name="name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputID" placeholder="App ID..." ng-model="create.id" name="id">
+				</div>
+				<div class="form-group">
+					<input type="file" name="img" accept="image/*">
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-block btn-primary" value="Add App">
+				</div>
+			</form>
 		</div>
-		<div class="col-md-4 col-xs-12">
+		<div class="col-md-3 col-xs-12">
 			<h2>Remove App</h2>
 			<hr>
 			<div class="form-group">
-				<select class="form-control" ng-options="app._id as app.name for app in apps" ng-model="remove._id">
+				<select class="form-control" ng-options="app as app.name for app in apps" ng-model="remove">
 					<option value="">Choose app name...</option>
 				</select>
 			</div>
