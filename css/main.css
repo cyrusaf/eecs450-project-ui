@@ -19,3 +19,15 @@ body {
 .approved-app div img {
 	width: 30%;
 }
+
+.success, .danger {
+	cursor: pointer;
+}
+
+.ssuccess {
+	background: #0f0 !important;
+}
+
+.sdanger {
+	background: #f00 !important;
+}

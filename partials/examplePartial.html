@@ -25,6 +25,7 @@
 					<input type="text" class="form-control" id="inputID" placeholder="App ID..." ng-model="create.id" name="id">
 				</div>
 				<div class="form-group">
+					<label>Choose Icon</label>
 					<input type="file" name="img" accept="image/*">
 				</div>
 				<div class="form-group">
@@ -43,6 +44,30 @@
 			<div class="form-group">
 				<button class="btn btn-block btn-danger" ng-click="removeApp()">Remove App</button>
 			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Manage File Extensions</h2>
+			<hr>
+			<table class="table table-bordered table-responsive">
+				<thead>
+					<tr>
+						<th>App</th>
+						<th ng-repeat="ext in exts">{{ext}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="app in apps">
+						<td>{{app.name}}</td>
+						<td ng-repeat="ext in exts"
+							ng-class="{success: (app.exts.indexOf(ext) != -1), danger: (app.exts.indexOf(ext) == -1)}"
+							ng-click="toggleExt(app, ext)">
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
