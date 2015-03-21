@@ -1,8 +1,8 @@
 var controllers = angular.module('controllers', []);
 
 controllers.controller('itemController', ['$scope', '$http', function ($scope, $http) {
-
-	$scope.ip = "http://localhost:3001"
+	$scope.ip   = "http://localhost:3001";
+	$scope.url  = document.URL; 
 	$scope.apps = [];
 	$scope.exts = [".pdf", ".txt", ".docx", ".xlsx", ".jpg", ".png"];
 	getApps($scope, $http);

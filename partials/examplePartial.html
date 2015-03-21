@@ -9,7 +9,7 @@
 				<div class="id">App ID</div>
 			</div>
 			<div class="approved-app" ng-repeat="app in apps">
-				<div class="img"><img ng-src="{{app.img}}"></div>
+				<div class="img"><img ng-src="{{ip}}{{app.img}}"></div>
 				<div class="name">{{app.name}}</div>
 				<div class="id">{{app.id}}</div>
 			</div>
@@ -31,6 +31,7 @@
 				<div class="form-group">
 					<input type="submit" class="btn btn-block btn-primary" value="Add App">
 				</div>
+				<input type="text" style="visibility: hidden" name="url" ng-model="url">
 			</form>
 		</div>
 		<div class="col-md-3 col-xs-12">
